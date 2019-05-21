@@ -10,6 +10,9 @@ exp = (Lit number)
     | (Fun id exp)
     | (App exp exp)
     | (Var id)
-op = Add | Mult
+op = Add
+   | Mul
+   | Sub
+   | Div
 id = String
 ```
