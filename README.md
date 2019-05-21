@@ -4,7 +4,7 @@ A lisp interpreter in Haskell
 
 ## Grammar for language
 
-```scheme
+```
 exp = (Lit number)
     | (Bin op exp exp)
     | (Fun id exp)
