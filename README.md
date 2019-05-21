@@ -5,11 +5,11 @@ A lisp interpreter in Haskell
 ## Grammar for language
 
 ```scheme
-exp = number
-    | (op exp exp)
-    | (fun (id) exp)
-    | (with ((id exp)) exp)
-    | (exp exp)
-    | id
-op = + | *
+exp = (Lit number)
+    | (Bin op exp exp)
+    | (Fun id exp)
+    | (App exp exp)
+    | (Var id)
+op = Add | Mult
+id = String
 ```
