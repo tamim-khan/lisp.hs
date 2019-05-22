@@ -1,7 +1,5 @@
 data Op = Add 
         | Mul
-        | Sub
-        | Div
         deriving (Show)
 
 data Ast = Lit Int 
@@ -33,9 +31,6 @@ interp (Var x) env = (findVal x env)
 opTrans :: Op -> (Int -> Int -> Int)
 opTrans Add  = (+)
 opTrans Mul = (*)
-opTrans Sub = (-)
-opTrans Div = (/)
-
 
 findVal :: String -> [(String, Val)] -> Val
 findVal name env =
